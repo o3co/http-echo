@@ -10,6 +10,9 @@ app.use((req, res) => {
     method: req.method,
     path: req.path,
     body: req.body,
+    hostname: req.hostname,
+    originalUrl: req.originalUrl,
+    protocol: req.protocol,
   })
 })
 
