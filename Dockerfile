@@ -10,4 +10,4 @@ RUN yarn install --production
 ADD src ./src
 ADD config ./config
 
-CMD yarn src/index.mjs
+CMD yarn run start
