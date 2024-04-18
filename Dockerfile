@@ -1,4 +1,4 @@
-FROM node
+FROM node:alpine
 
 ENV APP_DIR src
 
@@ -9,3 +9,5 @@ RUN yarn install --production
 
 ADD src ./src
 ADD config ./config
+
+CMD yarn src/index.mjs
