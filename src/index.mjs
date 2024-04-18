@@ -9,6 +9,10 @@ app.get('/', (req, res) => {
   res.send('Welcome to Express!')
 })
 
+app.post('/', (req, res) => {
+  res.send('Welcome to Express!')
+})
+
 app
   .use('/_healthcheck', (req, res) => {
     res.json({
