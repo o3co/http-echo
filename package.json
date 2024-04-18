@@ -2,13 +2,26 @@
   "name": "http-echo",
   "version": "0.0.0",
   "private": true,
+  "type": "module",
+  "license": "UNLICENSED",
+  "author": "Yoshi Aoki <yoshi@1o1.co.jp>",
   "scripts": {
-    "format": "prettier --write \"**/*.{js,cjs,mjs,yml}\""
+    "develop": "cross-env NODE_ENV=development nodemon src/index.mjs --watch --es-module-specifier-resolution=node",
+    "start": "cross-env NODE_ENV=production node src/index.mjs",
+    "format": "prettier --write \"**/*.{js,mjs,yml}\""
   },
   "dependencies": {
-    "config": "^3.3.11",
-    "express": "^4.19.2",
-    "js-yaml": "^4.1.0",
-    "prettier": "^3.2.5"
+    "cross-env": "~7.0.3",
+    "nodemon": "~3.1.0",
+    "config": "~3.3.11",
+    "express": "~4.19.2",
+    "js-yaml": "~4.1.0"
+  },
+  "devDependencies": {
+    "prettier": "~3.2.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:o3co/http-echo"
   }
 }

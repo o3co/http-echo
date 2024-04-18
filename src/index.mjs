@@ -13,6 +13,7 @@ app.use((req, res) => {
     hostname: req.hostname,
     originalUrl: req.originalUrl,
     protocol: req.protocol,
+    query: req.query,
   })
 })
 
