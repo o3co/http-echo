@@ -3,6 +3,8 @@ import config from 'config'
 
 const app = express()
 
+app.use(express.json())
+
 app.use((req, res) => {
   res.json({
     method: req.method,
