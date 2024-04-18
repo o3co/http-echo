@@ -9,12 +9,13 @@ app.get('/', (req, res) => {
   res.send('Welcome to Express!')
 })
 
-app.use('/_healthcheck', (req, res) => {
-  res.json({
-    code: 200,
-    message: 'OK',
+app
+  .use('/_healthcheck', (req, res) => {
+    res.json({
+      code: 200,
+      message: 'OK',
+    })
   })
-})
-listen(config.get('http.port'), () => {
-  console.log('Start server port:3000')
-})
+  .listen(config.get('http.port'), () => {
+    console.log('Start server port:3000')
+  })
