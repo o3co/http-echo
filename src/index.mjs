@@ -3,19 +3,25 @@ import config from 'config'
 
 const app = express()
 
-app.use(express.json())
+app
+  // Support JsonBody
+  .use(express.json())
+  // Handle Request
+  .use((req, res) => {
+    const data = {
+      method: req.method,
+      path: req.path,
+      body: req.body,
+      hostname: req.hostname,
+      originalUrl: req.originalUrl,
+      protocol: req.protocol,
+      query: req.query,
+    }
 
-app.use((req, res) => {
-  res.json({
-    method: req.method,
-    path: req.path,
-    body: req.body,
-    hostname: req.hostname,
-    originalUrl: req.originalUrl,
-    protocol: req.protocol,
-    query: req.query,
+    console.log(JSON.stringify(data))
+
+    res.json(data)
   })
-})
 
 app.listen(config.get('http.port'), config.get('http.hostname'), () => {
   console.log(
