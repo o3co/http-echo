@@ -1,9 +1,9 @@
 {
   "name": "http-echo",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
   "type": "module",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "author": "Yoshi Aoki <yoshi@1o1.co.jp>",
   "scripts": {
     "develop": "cross-env NODE_ENV=development nodemon src/index.mjs",
@@ -11,14 +11,14 @@
     "format": "prettier --write \"**/*.{js,mjs,yml}\""
   },
   "dependencies": {
-    "cross-env": "~7.0.3",
-    "config": "~3.3.11",
-    "express": "~4.19.2",
-    "js-yaml": "~4.1.0"
+    "config": "3.3.x",
+    "cross-env": "7.0.x",
+    "express": "4.19.x",
+    "js-yaml": "4.1.x"
   },
   "devDependencies": {
-    "nodemon": "~3.1.0",
-    "prettier": "~3.2.5"
+    "nodemon": "3.1.x",
+    "prettier": "3.3.x"
   },
   "repository": {
     "type": "git",

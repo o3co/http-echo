@@ -16,6 +16,7 @@ app
       originalUrl: req.originalUrl,
       protocol: req.protocol,
       query: req.query,
+      headers: req.headers
     }
 
     console.log(JSON.stringify(data))
